@@ -3136,6 +3136,9 @@ public class PerforceSCM extends SCM {
      *      workspace.
      *      False to veto the workspace deletion.
      */
+
+    /*
+     * SMS - Disabled to prevent random syncing to @0
     @Override
     public boolean processWorkspaceBeforeDeletion(AbstractProject<?,?> project, FilePath workspace, Node node) {
         Logger perforceLogger = Logger.getLogger(PerforceSCM.class.getName());
@@ -3166,6 +3169,7 @@ public class PerforceSCM extends SCM {
         }
         return true;
     }
+    */
 
     @Override public boolean requiresWorkspaceForPolling() {
         // nodes are allocated and used in the pollChanges() function if available,
